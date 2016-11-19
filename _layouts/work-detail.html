@@ -1,0 +1,49 @@
+---
+---
+{% include head.html %}
+<div class="WorkDetail">
+{% include header.html %}
+
+<svg style="display:none;">
+    {% include svg-menu.html %}
+    {% include svg-chevrons.html %}
+</svg>
+
+<a href="../{{ page.prevLink }}" class="WorkDetail-prevLink">
+    <!-- <img src="../img/chevron-left.svg" alt="previous image"> -->
+    <svg>
+        <use xlink:href="#chevron-left"></use>
+    </svg>
+</a>
+
+<div class="WorkDetail-img WorkDetail-img--{{ page.num }}{{ page.name}}" role="img"><span class="WorkDetail-name">{{ page.name }}</span></div>
+
+<a href="../{{ page.nextLink }}" class="WorkDetail-nextLink">
+    <!-- <img src="../img/chevron-right.svg" alt="next image"> -->
+    <svg>
+        <use xlink:href="#chevron-right"></use>
+    </svg>
+</a>
+
+{% include footer.html %}
+
+</div>
+
+<script>
+{% include menu.js %}
+{% include email.js %}
+</script>
+
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  // ga('create', 'UA-34098051-1', 'auto');
+  // ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

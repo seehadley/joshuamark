@@ -1,0 +1,10 @@
+.Footer {
+    @include layout-container(sm);
+
+    text-align: center;
+}
+
+.Footer-copyright {
+    font-size: map-get($font-size-map, size-1);
+    color: $font-color-light;
+}

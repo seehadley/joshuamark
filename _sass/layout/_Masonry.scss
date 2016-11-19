@@ -1,0 +1,38 @@
+/* ---- grid ---- */
+
+.Masonry:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Masonry-gridSizer,
+.Masonry-item {
+  @include content-width(full);
+
+  @include media-query(sm) {
+    @include content-width(half);
+  }
+
+  @include media-query(md) {
+    @include content-width(third);
+  }
+}
+
+.Masonry-gutterSizer {
+  width: 0;
+
+  @include media-query(sm) {
+    width: $column-spacing;
+  }
+}
+
+.Masonry-item {
+  float: left;
+  margin-bottom: $column-spacing;
+}
+
+.Masonry-item img {
+  display: block;
+  max-width: 100%;
+}

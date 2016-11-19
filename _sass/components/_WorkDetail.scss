@@ -1,0 +1,171 @@
+.WorkDetail {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.WorkDetail-img {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 $outer-padding*1.25;
+  flex: 1;
+}
+
+.WorkDetail-img {
+
+  &--31everything {
+    @include work-image('31everything', detail);
+  }
+
+  &--30lovewarX {
+    @include work-image('30lovewarX', detail);
+  }
+
+  &--29JMPflag {
+    @include work-image('29JMPflag', detail);
+  }
+
+  &--28JMPmirror {
+    @include work-image('28JMPmirror', detail);
+  }
+
+  &--27JMPpaterson {
+    @include work-image('27JMPpaterson', detail);
+  }
+
+  &--26JMPmanhattanhenge {
+    @include work-image('26JMPmanhattanhenge', detail);
+  }
+
+  &--25JMPx\+x {
+    @include work-image('25JMPxx', detail);
+  }
+
+  &--24carwash2 {
+    @include work-image('24carwash2', detail);
+  }
+
+  &--23JMPrunlike {
+    @include work-image('23JMPrunlike', detail);
+  }
+
+  &--22JMPace {
+    @include work-image('22JMPace', detail);
+  }
+
+  &--21JMPflwrs1 {
+    @include work-image('21JMPflwrs1', detail);
+  }
+
+  &--20JMPuniverse {
+    @include work-image('20JMPuniverse', detail);
+  }
+
+  &--19JMPEastgate {
+    @include work-image('19JMPEastgate', detail);
+  }
+
+  &--18JMPriverside {
+    @include work-image('18JMPriverside', detail);
+  }
+
+  &--17JMPcube {
+    @include work-image('17JMPcube', detail);
+  }
+
+  &--16JMPyellowcell {
+    @include work-image('16JMPyellowcell', detail);
+  }
+
+  &--15JMPlisten {
+    @include work-image('15JMPlisten', detail);
+  }
+
+  &--14JMPinstallation {
+    @include work-image('14JMPinstallation', detail);
+  }
+
+  &--13JMPpinklemon {
+    @include work-image('13JMPpinklemon', detail);
+  }
+
+  &--12JMPferdinand1 {
+    @include work-image('12JMPferdinand1', detail);
+  }
+
+  &--11tiger1 {
+    @include work-image('11tiger1', detail);
+  }
+
+  &--10JMPredr {
+    @include work-image('10JMPredr', detail);
+  }
+
+  &--09JMPfable {
+    @include work-image('09JMPfable', detail);
+  }
+
+  &--08Debs {
+    @include work-image('08Debs', detail);
+  }
+
+  &--07JMPbluedebs {
+    @include work-image('07JMPbluedebs', detail);
+  }
+
+  &--06JMPwithout {
+    @include work-image('06JMPwithout', detail);
+  }
+
+  &--05myhill5 {
+    @include work-image('05myhill5', detail);
+  }
+
+  &--04JMPsleep2 {
+    @include work-image('04JMPsleep2', detail);
+  }
+
+  &--03JMPbway2 {
+    @include work-image('03JMPbway2', detail);
+  }
+
+  &--02JMPL {
+    @include work-image('02JMPL', detail);
+  }
+
+  &--01JMPamy {
+    @include work-image('01JMPamy', detail);
+  }
+
+  &--00BBQog {
+    @include work-image('00BBQog', detail);
+  }
+
+}
+
+.WorkDetail-nextLink,
+.WorkDetail-prevLink {
+  position: absolute;
+  top: 50%;
+  height: 48px;
+  width: 48px;
+
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.WorkDetail-nextLink {
+  right: 0;
+}
+
+.WorkDetail-prevLink {
+  left: 0;
+}
+
+.WorkDetail-name {
+  @include visuallyhidden;
+}

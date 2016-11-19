@@ -1,0 +1,31 @@
+// color
+$font-color-base: #000;
+$font-color-light: #767676;
+
+// layout
+$column-spacing: 0.75rem;
+$outer-padding: $column-spacing*3;
+$outer-padding-sm: $column-spacing;
+
+$column-item-border-style: 1px solid;
+$column-item-border-color-hover: #767676;
+$column-item-border-color: lighten($column-item-border-color-hover, 30%);
+
+$column-item-border: $column-item-border-style $column-item-border-color;
+$column-item-border-hover: $column-item-border-style $column-item-border-color-hover;
+
+$generate-responsive-classes: true;
+
+$max-width: 85rem;
+
+// typography
+$font-family: sans-serif;
+$font-size-base: 16px;
+
+$font-size-map: (
+    size-1: $font-size-base* 0.79,
+    size-2: $font-size-base* 0.889,
+    size-3: $font-size-base,
+    size-4: $font-size-base * 1.125,
+    size-5: $font-size-base * 1.266    
+);

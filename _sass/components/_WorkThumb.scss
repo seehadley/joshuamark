@@ -1,0 +1,135 @@
+.WorkThumb {
+
+  &--31everything {
+    @include work-image('31everything');
+  }
+
+  &--30lovewarX {
+    @include work-image('30lovewarX');
+  }
+
+  &--29JMPflag {
+    @include work-image('29JMPflag');
+  }
+
+  &--28JMPmirror {
+    @include work-image('28JMPmirror');
+  }
+
+  &--27JMPpaterson {
+    @include work-image('27JMPpaterson');
+  }
+
+  &--26JMPmanhattanhenge {
+    @include work-image('26JMPmanhattanhenge');
+  }
+
+  &--25JMPx\+x {
+    @include work-image('25JMPxx');
+  }
+
+  &--24carwash2 {
+    @include work-image('24carwash2');
+  }
+
+  &--23JMPrunlike {
+    @include work-image('23JMPrunlike');
+  }
+
+  &--22JMPace {
+    @include work-image('22JMPace');
+  }
+
+  &--21JMPflwrs1 {
+    @include work-image('21JMPflwrs1');
+  }
+
+  &--20JMPuniverse {
+    @include work-image('20JMPuniverse');
+  }
+
+  &--19JMPEastgate {
+    @include work-image('19JMPEastgate');
+  }
+
+  &--18JMPriverside {
+    @include work-image('18JMPriverside');
+  }
+
+  &--17JMPcube {
+    @include work-image('17JMPcube');
+  }
+
+  &--16JMPyellowcell {
+    @include work-image('16JMPyellowcell');
+  }
+
+  &--15JMPlisten {
+    @include work-image('15JMPlisten');
+  }
+
+  &--14JMPinstallation {
+    @include work-image('14JMPinstallation');
+  }
+
+  &--13JMPpinklemon {
+    @include work-image('13JMPpinklemon');
+  }
+
+  &--12JMPferdinand1 {
+    @include work-image('12JMPferdinand1');
+  }
+
+  &--11tiger1 {
+    @include work-image('11tiger1');
+  }
+
+  &--10JMPredr {
+    @include work-image('10JMPredr');
+  }
+
+  &--09JMPfable {
+    @include work-image('09JMPfable');
+  }
+
+  &--08Debs {
+    @include work-image('08Debs');
+  }
+
+  &--07JMPbluedebs {
+    @include work-image('07JMPbluedebs');
+  }
+
+  &--06JMPwithout {
+    @include work-image('06JMPwithout');
+  }
+
+  &--05myhill5 {
+    @include work-image('05myhill5');
+  }
+
+  &--04JMPsleep2 {
+    @include work-image('04JMPsleep2');
+  }
+
+  &--03JMPbway2 {
+    @include work-image('03JMPbway2');
+  }
+
+  &--02JMPL {
+    @include work-image('02JMPL');
+  }
+
+  &--01JMPamy {
+    @include work-image('01JMPamy');
+  }
+
+  &--00BBQog {
+    @include work-image('00BBQog');
+  }
+
+}
+
+.WorkThumb-name {
+  @include visuallyhidden;
+}

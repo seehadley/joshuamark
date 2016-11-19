@@ -1,0 +1,116 @@
+// thanks Buzzfeed for the responsive mixins
+// http://solid.buzzfeed.com/
+$breakpoints: (
+  xs: 30rem, // 480
+  sm: 40em, // 640
+  md: 60rem, // 960
+  lg: 90rem, // 1440
+  xl: 120rem // 1920
+);
+
+// returns the apropriate media query
+// for the given breakpoint name
+@mixin media-query($breakpoint) {
+  @if (map-get($breakpoints, $breakpoint)) == null {
+    @content;
+  } @else {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}
+
+// nest content inside breakpoint prefix classes
+// in the apropriate media query block
+@mixin generate-breakpoint-prefixes($generate-responsive-classes: true) {
+  @if ($generate-responsive-classes == true) {
+    // generate prefixed classes
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    $breakpoint-prefix: "#{$breakpoint-name}-";
+
+    @include media-query($breakpoint-name) {
+      // Columns
+      .#{$breakpoint-prefix} {
+        @content;
+      }
+    }
+   }
+  } @else {
+    // only return xs styles
+   .xs- { @content; }
+  }
+}
+
+// hide from humans not screen readers
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px; margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin layout-container($padding: lg) {
+  @if ($padding == lg) {
+    padding: 1.5rem $outer-padding;
+  }
+  @else {
+    padding: 0.75rem $outer-padding;    
+  }
+
+  margin: 0 auto;
+  width: 100%;
+}
+
+%work-image {
+  background-size: cover;
+}
+
+@mixin work-image($work-item, $page: home) {
+  @extend %work-image;
+
+  // background-color: #fff !important;
+  background-image: url('../img/work/480w/#{$work-item}.jpg');
+
+  @if $page == home {
+    @include media-query(xs) {
+      background-image: url('../img/work/640w/#{$work-item}.jpg');
+    }
+
+    @include media-query(sm) {
+      background-image: url('../img/work/480w/#{$work-item}.jpg');
+    }
+
+    // @include media-query(lg) {
+    //   background-image: url('../img/work/640w/#{$work-item}.jpg');
+    // }
+  }
+  @else {
+    @include media-query(xs) {
+      background-image: url('../img/work/640w/#{$work-item}.jpg');
+    }
+
+    @include media-query(sm) {
+      background-image: url('../img/work/lg/#{$work-item}.jpg');
+    }
+  }
+  
+
+  &.not-loaded {
+    background-image: none;
+  }
+}
+
+@mixin content-width($width) {
+  @if $width == full {
+    width: 100%;
+  }
+  @elseif $width == half {
+    width: calc((100% - #{$column-spacing})/2);
+  }
+  @else { // third
+    width: calc((100% - #{$column-spacing*2})/3);
+  }
+}
