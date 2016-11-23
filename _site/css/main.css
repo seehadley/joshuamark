@@ -206,6 +206,13 @@ svg {
   width: 100%;
   height: 100%; }
 
+.Error {
+  padding: 0.75rem 2.25rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5em 0;
+  text-align: center; }
+
 .Footer {
   padding: 0.75rem 2.25rem;
   margin: 0 auto;
@@ -289,6 +296,16 @@ svg {
   min-height: 100vh;
   display: flex;
   flex-direction: column; }
+
+.WorkDetail-loadingMessage {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #767676; }
 
 .WorkDetail-img {
   background-size: contain;

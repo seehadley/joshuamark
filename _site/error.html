@@ -32,38 +32,11 @@
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="#000000"/>
 </symbol>
 
-    <symbol id="menu" viewBox="0 0 24 24">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="#000000"/>
-</symbol>
-<symbol id="chevron-left" viewBox="0 0 24 24">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="#000000"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</symbol>
-<symbol id="chevron-right" viewBox="0 0 24 24">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#000000"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</symbol>
-
 </svg>
 
-<div class="WorkDetail-loadingMessage">loading</div>
-
-<a href="20JMPuniverse" class="WorkDetail-prevLink">
-    <!-- <img src="../img/chevron-left.svg" alt="previous image"> -->
-    <svg>
-        <use xlink:href="#chevron-left"></use>
-    </svg>
-</a>
-
-<div class="WorkDetail-img WorkDetail-img--21JMPflwrs1" role="img"><span class="WorkDetail-name">JMPflwrs1</span></div>
-
-<a href="22JMPace" class="WorkDetail-nextLink">
-    <!-- <img src="../img/chevron-right.svg" alt="next image"> -->
-    <svg>
-        <use xlink:href="#chevron-right"></use>
-    </svg>
-</a>
+<div class="Error">
+    <p>Sorry, friend. That page doesn't exist.</p>
+</div>
 
 <div class="Footer">
     <span class="Footer-copyright">&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> Joshua Mark Phillippe</span>
@@ -83,18 +56,6 @@ mobMenuLink.addEventListener('click', function(e) {
     nav.classList.add('is-displayed');
   }
 });
-
-// http://www.grall.name/posts/1/antiSpam-emailAddressObfuscation.html
-function decode(a) {
-  return a.replace(/[a-zA-Z]/g, function(c){
-    return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-  }) 
-};
-function openMailer(element) {
-  var y = decode("znvygb:wcuvyyvccr@tznvy.pbz");
-  element.setAttribute("href", y);
-  element.setAttribute("onclick", "");
-};
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

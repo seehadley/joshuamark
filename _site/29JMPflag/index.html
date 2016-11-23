@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="/css/main.css">
+<base href="http://www.joshuamark.net/">
+<link rel="stylesheet" href="css/main.css">
 <link rel="shortcut icon" sizes="16x16 32x32" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Paintings, photos and prints by Indianapolis artist Joshua Mark Phillippe">
+<meta name="keywords" content="paintings, photos, prints, indianapolis, art, joshua phillippe, josh phillippe">
 
 <div class="WorkDetail">
 <div class="Header">
-    <a class="Header-logo" href="/redesign">
-        <img class="Header-image" src="/img/logo.png" alt="Joshua Mark Phillippe">
+    <a class="Header-logo" href="/">
+        <img class="Header-image" src="img/logo.png" alt="Joshua Mark Phillippe">
     </a>
     <a class="Header-menuIcon xs-float-right" href>
         <!-- <img src="/img/menu.svg" alt="menu"> -->
@@ -16,7 +19,7 @@
         </svg>
     </a>
     <div class="Nav sm-inline-block sm-float-right">
-        <a class="Nav-link" href="/redesign">work</a>
+        <a class="Nav-link" href="/">work</a>
         <a class="Nav-link" href onclick="openMailer(this);">contact</a>
         <a class="Nav-link" href="http://ice9.tumblr.com/">blog</a>
     </div>
@@ -44,7 +47,9 @@
 
 </svg>
 
-<a href="../28JMPmirror" class="WorkDetail-prevLink">
+<div class="WorkDetail-loadingMessage">loading</div>
+
+<a href="28JMPmirror" class="WorkDetail-prevLink">
     <!-- <img src="../img/chevron-left.svg" alt="previous image"> -->
     <svg>
         <use xlink:href="#chevron-left"></use>
@@ -53,7 +58,7 @@
 
 <div class="WorkDetail-img WorkDetail-img--29JMPflag" role="img"><span class="WorkDetail-name">JMPflag</span></div>
 
-<a href="../30lovewarX" class="WorkDetail-nextLink">
+<a href="30lovewarX" class="WorkDetail-nextLink">
     <!-- <img src="../img/chevron-right.svg" alt="next image"> -->
     <svg>
         <use xlink:href="#chevron-right"></use>
@@ -91,16 +96,13 @@ function openMailer(element) {
   element.setAttribute("onclick", "");
 };
 
-</script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-<script>
-  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  // ga('create', 'UA-34098051-1', 'auto');
-  // ga('send', 'pageview');
+ga('create', 'UA-34098051-1', 'auto');
+ga('send', 'pageview');
 
 </script>
 
