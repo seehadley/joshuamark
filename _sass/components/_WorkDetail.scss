@@ -4,6 +4,19 @@
   flex-direction: column;
 }
 
+.WorkDetail-loadingMessage {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  
+  color: #767676;
+}
+
 .WorkDetail-img {
   background-size: contain;
   background-position: center;
