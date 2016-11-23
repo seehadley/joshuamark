@@ -1,0 +1,484 @@
+/******************************
+responsive layout with help from article by @thierrykoblentz
+and conversations with @khatt
+*******************************/
+
+/*******************************
+all sizes
+*******************************/
+* {margin:0;padding:0;}
+html {height:100%;}
+.clear {clear:both;}
+.bottomPadding {
+	display:block;
+	height:1.5em;
+}
+body {
+	background:url('img/textures/mooning.png') top left;
+	height:100%;
+	width:100%;
+	font-family: 'Open Sans', sans-serif;
+	color:#4a4a4a;
+	font-size:1em;
+}
+#wrapper {
+	min-height:100%;
+	background-color:#f0f0f0;
+	box-shadow: 0 0 2px 2px #a0a0a0;
+}
+.img_color {
+	position:absolute;
+	top:0;
+	left:0;
+}
+.img_bw {
+	position:relative;
+	left:-2000px;
+}
+a img {border:none;}
+#links a {
+	text-decoration:none;
+	color:#4a4a4a;
+/*	transition:color .5s;
+	-moz-transition:color .5s;
+	-webkit-transition:color .5s;
+	-o-transition:color .5s;*/
+}
+#small-links a {
+	text-decoration:none;
+	color:white;
+}
+#links a:hover {
+	color:#ca569d;
+/*	transition:color .5s;
+	-moz-transition:color .5s;
+	-webkit-transition:color .5s;
+	-o-transition:color .5s;*/
+}
+#copyLine {
+	text-align:center;
+	padding:2em 0;
+	font-size:50%;
+}
+#gallery {
+	margin:auto;
+	float:left
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+#gallery #loaderImg {
+	text-align:center;
+	margin:6em 0;
+	display:none;
+}
+#gallery ul {
+	clear:left;
+	float:left;
+	list-style:none;
+	position:relative;
+	left:50%;
+	text-align:center;
+}
+#gallery ul li {
+	display:block;
+	float:left;
+	list-style:none;
+	position:relative;
+	margin:1em;
+	right:50%;
+	display:block;
+	width:160px;
+	height:160px;
+}
+#gallery ul li img {
+	width:100%;
+	height:100%;
+}
+#fullscreenLink {
+	display:none;
+	font-size:75%;
+	margin:1em;
+	text-align:right;
+}
+#slideCounter {
+	font-size:60%;
+	width:100%;
+	margin:1em 0;
+	text-align:center;
+}
+#slideCounter a {
+	margin-left:4em;
+	color:#4a4a4a;
+}
+#slideCounter a:hover {
+	color:#ca569d;
+}
+#imgView {margin-top:1em;}
+#contact {
+	text-align:left;
+}
+#contact input[type="text"] {
+	border:1px solid #4a4a4a;
+	width:100%;
+	height:2em;
+	margin-bottom:1.5em;
+}
+#contact #countdown {
+	font-size:75%;
+	border:none;
+	background:none;
+	margin-bottom:3em;
+	color:#6a6a6a;
+}
+#contact textarea {
+	border:1px solid #4a4a4a;
+	width:100%;
+	height:24em;
+	margin-bottom:.25em;
+}
+#contact input[type="submit"] {
+	color:white;
+	border:none;
+	background-color:#4a4a4a;
+	width:6em;
+	height:3em;
+	cursor:pointer;
+	cursor:hand;
+}
+#contact input[type="submit"]:hover {
+	border:2px solid #ca569d;
+}
+#nMessage, #eMessage, #mMessage {
+	font-size:75%;
+	font-weight:bold;
+	margin-left:1em;
+	color:red;
+}
+
+/*******************************
+image pages
+*******************************/
+#imgNav {
+	font-size:60%;
+	width:100%;
+	text-align:center;
+}
+#imgNav a {
+	margin:0 10px;
+	text-decoration:none;
+	color:#4a4a4a;
+}
+#imgNav a:hover {
+	color:#ca569d;
+}
+#imgView {
+	text-align:center;
+}
+#imgView imgNavNext {
+	z-index:100;
+}
+#imgNavPrev {
+	z-index:100;
+}
+
+/*******************************
+small phones
+*******************************/
+@media only screen and (min-width:320px) {
+	#gallery {
+		margin-top:1em;
+		width:320px;
+		padding-left:1em;
+	}
+	#gallery ul li {
+		margin:.5em;
+		width:136px;
+		height:136px;
+	}
+	#header, #headerImgPage {
+		width:288px;
+		margin:0 auto;
+		padding:1em 0 0 0;
+		position:relative;
+	}
+	#contact {
+		width:288px;
+	}
+	#logo {
+		float:left;
+		bottom: 0;
+		left: 0;
+		display:block;
+		width:88px;
+		height:32px;
+		background-image:url('img/initials.png');
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	#links #lnkContact, #links #lnkBlog, #links #lnkWork {display:none;}
+	#links, #small-links {
+		float:right;
+		list-style:none;
+	}
+	#small-links {
+		float:none;
+		display:none;
+		width:280px;
+		height:2.5em;
+		background-color:#4a4a4a;
+		width:100%;
+		text-align:center;
+	}
+	#small-links ul {
+		position:relative;
+		top:.5em;
+	}
+	#links ul, #small-links ul {
+		float:none;
+	}
+	#small-links ul li {
+		display:inline;
+		padding-left:2em;
+		padding-right:0;
+	}
+	#links ul li {display:inline;}
+	#links a {font-size:175%;}
+	#links #moreOptions a {
+		display:block;
+		width:19px;
+		height:16px;
+		position:relative;
+		top:.4em;
+		background-image:url('img/menu.png');
+		background-size:cover;
+	}
+	#imgNav {margin-top:2em;}
+	#imgNav a {
+		font-size:125%;
+		margin-top:3em;
+	}
+	#imgView img {
+		max-width:90%;
+	}
+	#contact {
+		font-size:80%;
+		margin:2em auto 2em auto;
+	}
+}
+
+/*******************************
+iPhone 4
+*******************************/
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+	#gallery {
+		margin-top:1em;
+		width:320px;
+		padding-left:.5em;
+	}
+	#gallery ul li {
+		margin:.5em;
+		width:136px;
+		height:136px;
+	}
+	#header, #headerImgPage {
+		height:47px;
+		width:288px;
+		margin:0 auto;
+		padding:1em 0 0 0;
+	}
+	#contact {width:288px;}
+	#logo {
+		float:left;
+		bottom: 0;
+		left: 0;
+		display:block;
+		width:88px;
+		height:32px;
+		background-image:url('img/initials.png');
+		background-size:cover;
+	}
+	#links, #small-links {
+		float:right;
+		list-style:none;
+	}
+	#small-links {
+		float:none;
+		display:none;
+		width:288px;
+		height:2.5em;
+		background-color:black;
+		width:100%;
+	}
+	#links ul, #small-links ul {
+		float:none;
+	}
+	#small-links ul li {
+		display:inline;
+		padding-left:2em;
+		padding-right:0;
+	}
+	#links ul li {display:inline;}
+	#links #lnkContact, #links #lnkBlog, #links #lnkWork {display:none;}
+	#links a {font-size:175%;}
+	#links #moreOptions a {
+		display:block;
+		width:19px;
+		height:16px;
+		position:relative;
+		background-image:url('img/menu.png');
+		background-size:cover;
+	}
+	#imgView {
+		width:100%;
+	}
+}
+
+/* FF hack for outline, which is on the outside of the shadow */
+@-moz-document url-prefix() {
+	#wrapper {outline-offset: -6px;}
+}
+
+/*******************************
+ipads & smaller screens
+*******************************/
+@media only screen and (min-width:640px) {
+	#wrapper {
+		outline:1px solid #4a4a4a;
+		margin:1.5em 3em 0 3em;
+		min-width:640px;
+	}
+	#gallery {
+		margin-top:2em;
+		width:576px;
+		padding-left:0;
+	}
+	#gallery ul li {
+		margin:1em;
+		width:160px;
+		height:160px;
+	}
+	#header, #headerImgPage {
+		height:47px;
+		width:544px;
+		padding:3em 0 0 0;
+	}
+	#contact {width:544px;}
+	#logo {
+		width:131px;
+		height:48px;
+	}
+	#small-links {display:none;}
+	#links ul {
+		position:relative;
+		top:0.5em;
+	}
+	#links ul li {padding-left:2em;}
+	#links a {font-size:125%;}
+	#links #lnkContact, #links #lnkBlog, #links #lnkWork {display:inline;}
+	#links #moreOptions {display:none;}
+	/*.img_bw {
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:10;
+		transition:opacity .5s ease-in-out;
+		-moz-transition:opacity .5s ease-in-out;
+		-webkit-transition:opacity .5s ease-in-out;
+		-o-transition:opacity .5s ease-in-out;
+	}
+	.img_bw:hover {
+		opacity:0
+	}*/
+	#imgNav {margin-top:4em;}
+	#imgView img {
+		max-width:90%;
+	}
+	#contact {
+		font-size:100%;
+		margin:3em auto 2em auto;
+	}
+}
+
+
+/*******************************
+laptops & desktops
+*******************************/
+@media only screen and (min-width:1088px) {
+	#wrapper {
+		/*border-right-width:4em;
+		border-left-width:4em;*/
+	}
+	#gallery {
+		width:960px;
+	}
+	#header, #headerImgPage {
+		height:50px;
+		width:928px;
+	}
+	#contact {
+		width:500px;
+		font-size:120%;
+		text-align: center;
+
+	}
+	#links ul {
+		position:relative;
+		top:1em;
+	}
+	#links a {font-size:100%;}
+	#links ul li {padding-left:3em;}
+	#logo {
+		width:193px;
+		height:50px;
+		background-image:url('img/logo.png');
+		background-size:cover;
+	}
+	.img_bw {
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:10;
+		transition:opacity .5s ease-in-out;
+		-moz-transition:opacity .5s ease-in-out;
+		-webkit-transition:opacity .5s ease-in-out;
+		-o-transition:opacity .5s ease-in-out;
+	}
+	.img_bw:hover {
+		opacity:0
+	}
+	#imgNav a {font-size:100%;}
+	#imgView img {
+		max-width:928px;
+	}
+}
+
+
+/*******************************
+Royal Slider Overrides
+*******************************/
+.royalSlider {
+	display:none;
+	margin:auto;
+	width:100%;
+}
+.rsDefault,
+.rsDefault .rsOverflow,
+.rsDefault .rsSlide,
+.rsDefault .rsVideoFrameHolder,
+.rsDefault .rsThumbs {
+	background: #f0f0f0;
+	color: #FFF;
+}
+img.rsImg {
+	border: 1px solid #a0a0a0;
+}
+.rsDefault .rsArrowIcn, .rsDefault .rsFullscreenIcn {
+	background-color:rgba(74, 74, 74, 0.6);
+}
+.rsDefault .rsArrowIcn:hover, .rsDefault .rsFullscreenIcn:hover {
+	background-color:rgba(74, 74, 74, 1);
+}
+.rsDefault .rsFullscreenIcn {display:none;}

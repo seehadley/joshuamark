@@ -1,0 +1,62 @@
+<html>
+<link rel="stylesheet" href="../css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+<div class="WorkDetail">
+
+<div class="Header">
+    <a class="Header-logo" href="/redesign">
+        <img class="Header-image" src="../img/logo.png" alt="Joshua Mark Phillippe">
+    </a>
+    <div class="Nav xs-float-right">
+        <a class="Nav-mobileMenu" href="javascript:void();"><img src="../img/menu.svg" alt="menu"></a>
+        <a class="Nav-link" href="/redesign">work</a>
+        <a class="Nav-link" href onclick="openMailer(this);">contact</a>
+        <a class="Nav-link" href="http://ice9.tumblr.com/">blog</a>
+    </div>
+</div>
+
+
+
+<a href="../11tiger1" class="WorkDetail-prevLink">
+    <img src="../img/chevron-left.svg" alt="previous image">
+</a>
+
+<div class="WorkDetail-img WorkDetail-img--12JMPferdinand1"><span class="WorkDetail-name">JMPferdinand1</span></div>
+
+<a href="../13JMPpinklemon" class="WorkDetail-nextLink">
+    <img src="../img/chevron-right.svg" alt="next image">
+</a>
+
+<div class="Footer">
+    <span class="Footer-copyright">&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> Joshua Mark Phillippe</span>
+</div>
+
+</div>
+
+<script>
+// http://www.grall.name/posts/1/antiSpam-emailAddressObfuscation.html
+function decode(a) {
+  return a.replace(/[a-zA-Z]/g, function(c){
+    return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+  }) 
+};
+function openMailer(element) {
+  var y = decode("znvygb:wcuvyyvccr@tznvy.pbz");
+  element.setAttribute("href", y);
+  element.setAttribute("onclick", "");
+};
+
+// var navLinks = document.querySelectorAll('.Nav-link');
+var mobMenuLink = document.querySelector('.Nav-mobileMenu');
+
+mobMenuLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  console.log('menu click');
+});
+</script>
+
+</body>
+</html>
