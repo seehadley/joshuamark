@@ -9,7 +9,7 @@
     {% include svg-chevrons.html %}
 </svg>
 
-<a href="../{{ page.prevLink }}" class="WorkDetail-prevLink">
+<a href="{{ page.prevLink }}" class="WorkDetail-prevLink">
     <!-- <img src="../img/chevron-left.svg" alt="previous image"> -->
     <svg>
         <use xlink:href="#chevron-left"></use>
@@ -18,7 +18,7 @@
 
 <div class="WorkDetail-img WorkDetail-img--{{ page.num }}{{ page.name}}" role="img"><span class="WorkDetail-name">{{ page.name }}</span></div>
 
-<a href="../{{ page.nextLink }}" class="WorkDetail-nextLink">
+<a href="{{ page.nextLink }}" class="WorkDetail-nextLink">
     <!-- <img src="../img/chevron-right.svg" alt="next image"> -->
     <svg>
         <use xlink:href="#chevron-right"></use>
